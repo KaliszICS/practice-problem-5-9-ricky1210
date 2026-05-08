@@ -2,6 +2,7 @@ import java.util.Stack;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 
 class Notes {
 	public static void main(String[] args) {
@@ -16,7 +17,7 @@ class Notes {
         System.out.println("Top Book: " + books.peek());
 
         // Removing the top (Pop) -> Removes "Design Patterns"
-        books.pop();
+        String savedPop = books.pop();
 
         System.out.println("New Top: " + books.peek());
 
@@ -36,7 +37,14 @@ class Notes {
         System.out.println("Next in line: " + printerLine.peek());
 
 
+        ArrayDeque<String> books3 = new ArrayDeque<String>();
+        
+        books3.addLast("Clean Code");
+        books3.addLast("Java Concurrency");
+        books3.addLast("Design Patterns");
 
+        books3.removeLast();
+        books3.removeFirst();
 
 
 
